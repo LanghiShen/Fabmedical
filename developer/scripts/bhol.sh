@@ -47,7 +47,8 @@ sed -i "s/\[SUFFIX\]/$MCW_SUFFIX/g" ~/Fabmedical/.github/workflows/content-web.y
 # Commit changes
 git add .
 git commit -m "Initial Commit"
-
+echo "here"
+return
 # Get ACR credentials and add them as secrets to Github
 ACR_CREDENTIALS=$(az acr credential show -n fabmedical$MCW_SUFFIX)
 ACR_USERNAME=$(jq -r -n '$input.username' --argjson input "$ACR_CREDENTIALS")
