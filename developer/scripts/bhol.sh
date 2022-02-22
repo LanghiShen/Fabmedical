@@ -58,8 +58,9 @@ cd ~/Fabmedical
 echo $GITHUB_TOKEN | gh auth login --with-token
 gh secret set ACR_USERNAME -b "$ACR_USERNAME"
 gh secret set ACR_PASSWORD -b "$ACR_PASSWORD" 
-echo "here"
+
 # Committing repository
 cd ~/Fabmedical
+echo "that"
 git branch -m master main
 git push -u origin main
